@@ -1,0 +1,26 @@
+{
+  "name": "collisions2",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://smohiudd.github.io/calgary-traffic-collision",
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.12.5",
+    "@turf/turf": "^5.1.6",
+    "chroma-js": "^1.3.7",
+    "datejs": "^1.0.0-rc3",
+    "gh-pages": "^2.0.0",
+    "latlon-geohash": "^1.1.0",
+    "mapbox-gl": "^0.48.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
