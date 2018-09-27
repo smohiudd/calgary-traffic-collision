@@ -1,4 +1,4 @@
-<h1>Predict and Visualize Traffic Collisions using Keras and tensorflow.js/h1>
+<h1>Predict and Visualize Traffic Collisions using Keras and tensorflow.js</h1>
 
 Working example: https://smohiudd.github.io/calgary-traffic-collision/
 Read the blog post here: https://nodalscapes.wordpress.com/2018/09/26/traffic-incident-prediction-model-using-machine-learning/
