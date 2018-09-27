@@ -167,30 +167,41 @@ class Application extends React.Component {
         <div className="border_box">
           <h1>Calgary Traffic Collision Prediction</h1>
 
-          <p>Predict traffic collisions <strong>probability</strong> with machine learning and open data</p><br/>
+          <div className="description">
+            <h2>Predict traffic collisions <strong>probability</strong> with machine learning and open data</h2>
+          </div>
 
+          <div className='row'>
 
-          <select id={'weekday'} onChange={this.handle} value={this.state.value} defaultValue={this.state.weekday} className="select_option">
-              {optionWeekdays}
-          </select>
-
-
-          <select id={'months'} onChange={this.handle} value={this.state.value} defaultValue={this.state.month} className="select_option">
-              {optionMonths}
-          </select>
-
-
-          <select id={'hours'} onChange={this.handle} value={this.state.value} defaultValue={this.state.hour} className="select_option">
-              {optionHours}
-          </select>
-
-          <img src={gradient} alt="gradient" style={{marginTop:"20px"}} />
-          <div id="textbox">
-              <p className="alignleft">60% Probability</p>
-              <p className="alignright">100% Probability</p>
+            <div className="column">
+              <select id={'weekday'} onChange={this.handle} value={this.state.value} defaultValue={this.state.weekday} className="select_option">
+                  {optionWeekdays}
+              </select>
             </div>
-            <div style={{clear: "both"}}></div><br/>
-            <h4>Saadiq Mohiuddin &copy;2018 www.nodalscapes.com</h4>
+
+            <div className="column">
+              <select id={'months'} onChange={this.handle} value={this.state.value} defaultValue={this.state.month} className="select_option">
+                  {optionMonths}
+              </select>
+            </div>
+
+            <div className="column">
+              <select id={'hours'} onChange={this.handle} value={this.state.value} defaultValue={this.state.hour} className="select_option">
+                  {optionHours}
+              </select>
+            </div>
+          </div>
+
+          <img src={gradient} alt="gradient" style={{marginTop:"5px"}} />
+          <div id="textbox">
+              <p className="alignleft">Low Probability</p>
+              <p className="alignright">High Probability</p>
+          </div>
+          <div style={{clear: "both"}}></div>
+
+          <div className='byline'>
+            <h4>&copy;2018 Saadiq Mohiuddin <a href="https://nodalscapes.wordpress.com/">www.nodalscapes.com</a></h4>
+          </div>
 
         </div>
 

@@ -5,7 +5,7 @@ html {
 }
 
 body {
-	margin: 0px;
+	margin: 10px;
 	padding: 0px;
 }
 
@@ -21,15 +21,14 @@ body {
 .select_option{
 	position: relative;
 	width:100%;
-	padding: 15px;
-	font-size:17px;
+	font-size:15px;
 	border: none;
 	border-radius: 5px;
 	color: #fff;
 	background: #5b5b5b;
 	font-style:bold;
 	outline:none;
-	margin-bottom:10px;
+	margin-bottom:5px;
 	display: inline;
 }
 
@@ -41,21 +40,21 @@ body {
 	margin:0px;
 	padding:15px;
 	color: #000;
-	 border-radius: 15px;
+	border-radius: 15px;
 }
 
 h1 {
 	font-size:25px;
-	line-height:27px;
+	line-height:25px;
 	font-weight:bold;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 h2 {
-	font-size:18px;
-	line-height:10px;
-	font-style: italic;
+	font-size:14px;
+	line-height:18px;
 	display: inline-block;
+	margin-bottom: 8px;
 }
 
 h4 {
@@ -70,17 +69,40 @@ p{
 	font-size: 12px;
 }
 
+
+
 .description{
 	display:none;
 }
 
+.byline{
+	display:none;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 3px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 
 @media screen and ( min-width: 500px ) {
 
+	body {
+		margin: 0px;
+		padding: 0px;
+	}
+
 	.border_box{
 		background-color:rgba(225, 225, 225, .7);
-		width:260px;
+		width:300px;
 		display: inline-block;
 		position: absolute;
 		margin:20px;
@@ -92,6 +114,23 @@ p{
 	.description{
 		margin-top: 20px;
 		display: block;
+	}
+
+	.byline{
+		margin-top: 15px;
+		display: block;
+	}
+
+	.column {
+		float: none;
+		width: 100%
+	}
+
+	h1 {
+		font-size:25px;
+		line-height:25px;
+		font-weight:bold;
+		margin-bottom: 0px;
 	}
 
 }
