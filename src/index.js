@@ -33,7 +33,7 @@ class Application extends React.Component {
     this.state = {
       lng: -114.073538,
       lat: 51.045012,
-      zoom: 10.2,
+      zoom: 10.4,
       weekday:'Monday',
       month: 'June',
       hour:'5pm'
@@ -70,11 +70,14 @@ class Application extends React.Component {
             'fill-opacity': {
               property:"prob",
               stops: [
-                [0.5,0.01],
-                [0.6,0.05],
+                [0.3,0],
+                [0.4,0.05],
+                [0.5,0.1],
+                [0.6,0.1],
                 [0.7,0.1],
-                [0.8,0.2],
-                [0.9,0.7],
+                [0.8,0.1],
+                [0.9,0.4],
+                [0.95,0.5],
                 [1,0.9]
               ]
             }
@@ -110,9 +113,9 @@ class Application extends React.Component {
 
     let geohash_one_hot = tf.oneHot(tf.tensor1d(geohash_indices, 'int32'), geohash_indices.length)
 
-    let input_day = days.indexOf(this.state.weekday)
-    let input_hour = hours.indexOf(this.state.hour)
-    let input_month = months.indexOf(this.state.month)
+    let input_day = days.indexOf(this.state.weekday)+1
+    let input_hour = hours.indexOf(this.state.hour)+1
+    let input_month = months.indexOf(this.state.month)+1
 
     var convert_cyclical = function(number, max) {
       let sin = Math.sin(2 * Math.PI * number/max)
@@ -122,8 +125,8 @@ class Application extends React.Component {
      };
 
     let tensor_month = convert_cyclical(input_month,12);
-    let tensor_day = convert_cyclical(input_day,6);
-    let tensor_hour = convert_cyclical(input_hour,23);
+    let tensor_day = convert_cyclical(input_day,7);
+    let tensor_hour = convert_cyclical(input_hour,24);
 
     let time_tile = tf.concat([tensor_month,tensor_day,tensor_hour],1).reshape([-1]).tile([geohash_indices.length]).reshape([geohash_indices.length, 6])
 
