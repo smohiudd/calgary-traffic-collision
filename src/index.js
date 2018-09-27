@@ -165,10 +165,10 @@ class Application extends React.Component {
       <div>
       <div ref={el => this.mapContainer = el} className="absolute top right left bottom" />
         <div className="border_box">
-          <h1>Calgary Traffic Collision Prediction</h1>
+          <h1>Calgary Traffic Incident Prediction</h1>
 
           <div className="description">
-            <h2>Predict traffic collisions <strong>probability</strong> with machine learning and open data</h2>
+            <h2>Predict traffic incident <strong>probability</strong> with machine learning and open data</h2>
           </div>
 
           <div className='row'>
